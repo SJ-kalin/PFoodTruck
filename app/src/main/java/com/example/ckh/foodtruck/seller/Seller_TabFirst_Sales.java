@@ -8,7 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.ckh.foodtruck.Main2Activity;
+
+import com.example.ckh.foodtruck.GraphActivity;
 import com.example.ckh.foodtruck.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -47,7 +48,6 @@ public class Seller_TabFirst_Sales extends Fragment implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.gmap);
         mapFragment.getMapAsync(this);
 
-
         return view;
     }
 
@@ -77,7 +77,7 @@ public class Seller_TabFirst_Sales extends Fragment implements OnMapReadyCallbac
 
         for (int i = 0; i < Seller_Login.allofseoul.size(); i++) {
             for (int j = 0; j < 5; j++) {
-                gmap.addMarker(new MarkerOptions().title(Seller_Login.allofseoul.get(i).get(j).examin_spot_name).position(new LatLng(Seller_Login.allofseoul.get(i).get(j).Ycode, Seller_Login.allofseoul.get(i).get(j).Xcode)).icon(BitmapDescriptorFactory.fromResource(R.drawable.truck)));
+                gmap.addMarker(new MarkerOptions().title(Seller_Login.allofseoul.get(i).get(j).getExamin_spot_name()).position(new LatLng(Seller_Login.allofseoul.get(i).get(j).getYcode(), Seller_Login.allofseoul.get(i).get(j).getXcode())).icon(BitmapDescriptorFactory.fromResource(R.drawable.truck)));
             }
         }
 
@@ -86,7 +86,7 @@ public class Seller_TabFirst_Sales extends Fragment implements OnMapReadyCallbac
         gmap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
-                Intent intent = new Intent(getActivity(), Main2Activity.class);
+                Intent intent = new Intent(getActivity(), GraphActivity.class);
                 intent.putExtra("ID", marker.getTitle());
                 startActivity(intent);
             }

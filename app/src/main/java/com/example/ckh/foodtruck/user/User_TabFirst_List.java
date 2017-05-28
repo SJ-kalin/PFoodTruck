@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import com.example.ckh.cstview.SellerMenuListviewAdapter;
-import com.example.ckh.cstview.UserTruckListviewAdapter;
+
+import com.example.ckh.listDTO.UserTruckListviewAdapter;
 import com.example.ckh.foodtruck.R;
 
 /**

@@ -10,26 +10,21 @@ import android.database.sqlite.SQLiteException;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.DialogPreference;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.ckh.cstview.Seller_MenuItem;
+
 import com.example.ckh.foodtruck.GlobalApplication;
-import com.example.ckh.foodtruck.MainActivity;
 import com.example.ckh.foodtruck.R;
-import com.example.ckh.foodtruck.Splash;
 import com.example.ckh.foodtruck.database.DBSQLiteOpenHelper;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.AccessibleObject;
 
 /**
  * Created by Ckh on 2016-10-02.
